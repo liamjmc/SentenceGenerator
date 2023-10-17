@@ -20,7 +20,7 @@ namespace SentenceGenerator.Domain.Services
             _logger = logger;
         }
 
-        public async Task AddAsync(string keyword, GptResponse gptResponse)
+        public async Task AddAsync(string keyword, GptResponse gptResponse, CancellationToken cancellationToken)
         {
             var content = gptResponse.Choices.FirstOrDefault()?.Message.Content;
 
@@ -38,7 +38,7 @@ namespace SentenceGenerator.Domain.Services
 
             try
             {
-                await _sentenceRepository.CreateSentence(sentence);
+                await _sentenceRepository.CreateSentence(sentence, cancellationToken);
             }
             catch (Exception ex)
             {

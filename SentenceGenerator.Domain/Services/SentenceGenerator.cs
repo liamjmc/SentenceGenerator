@@ -20,7 +20,7 @@
 
             var gptResponse = await _gptRequester.GetAsync(keyword, cancellationToken);
 
-            await _sentenceInserter.AddAsync(keyword, gptResponse);
+            await _sentenceInserter.AddAsync(keyword, gptResponse, cancellationToken);
 
             return gptResponse.Choices.FirstOrDefault()?.Message.Content;
         }

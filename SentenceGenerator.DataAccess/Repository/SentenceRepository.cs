@@ -18,7 +18,7 @@ namespace SentenceGenerator.DataAccess.Repository
             }
         }
 
-        public async Task<Sentence> CreateSentence(Sentence sentence)
+        public async Task<Sentence> CreateSentence(Sentence sentence, CancellationToken cancellationToken)
         {
             using (var context = new ApplicationDbContext())
             {

@@ -26,18 +26,7 @@ namespace SentenceGenerator.Domain.Services
 
         public async Task<GptResponse> GetAsync(string keyword, CancellationToken cancellationToken)
         {
-            var gptRequest = _gptRequestBuilder.Build(keyword);
-
-            var requestiItemJson = new StringContent(
-                JsonSerializer.Serialize(gptRequest),
-                Encoding.UTF8,
-                Application.Json);
-
-            var httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, _appSettings.ClientUrl)
-            {
-                Headers = { { HeaderNames.Accept, "application/json" } },
-                Content = requestiItemJson
-            };
+            var httpRequestMessage = CreateHttpRequestMessage(keyword);
 
             var httpClient = _httpClientFactory.CreateClient();
 
@@ -63,6 +52,22 @@ namespace SentenceGenerator.Domain.Services
 
             //TODO: should this throw an error?
             return null;
+        }
+
+        private HttpRequestMessage CreateHttpRequestMessage(string keyword)
+        {
+            var gptRequest = _gptRequestBuilder.Build(keyword);
+
+            var requestiItemJson = new StringContent(
+                JsonSerializer.Serialize(gptRequest),
+                Encoding.UTF8,
+                Application.Json);
+
+            return new HttpRequestMessage(HttpMethod.Post, _appSettings.ClientUrl)
+            {
+                Headers = { { HeaderNames.Accept, "application/json" } },
+                Content = requestiItemJson
+            };
         }
     }
 }

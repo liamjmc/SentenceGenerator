@@ -4,6 +4,6 @@ namespace SentenceGenerator.Domain.Services
 {
     public interface ISentenceInserter
     {
-        Task AddAsync(string keyword, GptResponse gptResponse);
+        Task AddAsync(string keyword, GptResponse gptResponse, CancellationToken cancellationToken);
     }
 }
