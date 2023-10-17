@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SentenceGenerator.DataAccess\SentenceGenerator.DataAccess.csproj" />
     <ProjectReference Include="..\SentenceGenerator.Domain\SentenceGenerator.Domain.csproj" />
   </ItemGroup>
 

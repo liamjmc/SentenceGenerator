@@ -10,5 +10,7 @@ namespace SentenceGenerator.Domain
     {
         public string ClientUrl { get; set; }  
         public string ClientSecret { get; set; }
+        public string GptModel { get; set; }
+        public double GptTemperature { get; set; }
     }
 }
