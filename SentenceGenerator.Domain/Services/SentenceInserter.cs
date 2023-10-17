@@ -22,16 +22,15 @@ namespace SentenceGenerator.Domain.Services
 
         public async Task AddAsync(string keyword, GptResponse gptResponse, CancellationToken cancellationToken)
         {
-            var content = gptResponse.Choices.FirstOrDefault()?.Message.Content;
+            var sentenceContent = gptResponse.Choices.FirstOrDefault()?.Message.Content;
 
-            if (content == null)
-                return;
+            if (string.IsNullOrWhiteSpace(sentenceContent)) return;
 
             var sentence = new Sentence
             {
                 Keyword = keyword,
                 Created = gptResponse.Created,
-                Content = content,
+                Content = sentenceContent,
                 GptModel = _appSettings.GptModel,
                 Temperature = _appSettings.GptTemperature
             };

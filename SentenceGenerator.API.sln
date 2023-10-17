@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentenceGenerator.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentenceGenerator.Domain.UnitTests", "SentenceGenerator.Domain.UnitTests\SentenceGenerator.Domain.UnitTests.csproj", "{F7C090CE-8600-4559-82E5-9438A501BBD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceGenerator.DataAccess", "SentenceGenerator.DataAccess\SentenceGenerator.DataAccess.csproj", "{18F6ECFE-E868-4628-BCAA-3A2AD55C363B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentenceGenerator.DataAccess", "SentenceGenerator.DataAccess\SentenceGenerator.DataAccess.csproj", "{18F6ECFE-E868-4628-BCAA-3A2AD55C363B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B53BF1D-E37F-4A00-8275-D953C14D2CB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3086E976-5285-49C2-8898-D0DA1FE550D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76C94420-7DE0-4F1C-99EE-A9A81F8F0386} = {7B53BF1D-E37F-4A00-8275-D953C14D2CB6}
+		{E4872976-BB95-4988-91FB-84AF0A0922C8} = {7B53BF1D-E37F-4A00-8275-D953C14D2CB6}
+		{F7C090CE-8600-4559-82E5-9438A501BBD6} = {3086E976-5285-49C2-8898-D0DA1FE550D3}
+		{18F6ECFE-E868-4628-BCAA-3A2AD55C363B} = {7B53BF1D-E37F-4A00-8275-D953C14D2CB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {995766BF-C29A-4C4B-9BBF-04CB46D5E5EB}
