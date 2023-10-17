@@ -6,7 +6,7 @@ using SentenceGenerator.Domain.Services;
 namespace SentenceGenerator.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class SentenceController : ControllerBase
     {
         private readonly ISentenceGenerator _sentenceGenerator;
