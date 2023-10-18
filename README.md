@@ -1,3 +1,5 @@
+[![.NET](https://github.com/liamjmc/SentenceGenerator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/liamjmc/SentenceGenerator/actions/workflows/dotnet.yml)
+
 # Sentence Generator
 
 Queries Chat GPT in order to generate a sentence given a keyword.
