@@ -28,7 +28,6 @@ namespace SentenceGenerator.API.Controllers
             return Ok(result);
         }
 
-        //todo maybe by route instead?
         [HttpPost(Name = "GenerateSentence")]
         public async Task<ActionResult<string>> GenerateSentence([FromQuery] string keyword, CancellationToken cancellationToken)
         {

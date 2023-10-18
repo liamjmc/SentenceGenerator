@@ -30,13 +30,17 @@ Queries Chat GPT in order to generate a sentence given a keyword.
 
 ### Sentence
 
-- Keyword - keyword used to query
-- Created - created on ticks
-- Content - the sentence that was generated
-- GptModel - the model used in order to generate the sentence
-- Temperature - the temperature (from 0 - 1) used to query
+- `Keyword` - word used to query
+- `Created` - created on ticks
+- `Content` - the sentence that was generated
+- `GptModel` - the model used in order to generate the sentence
+- `Temperature` - the temperature (from 0 - 1) used to query
 
 ## Improvements/further work
 
-- Could provide the format of the sentence as a config value
-- Multiple keywords, queried multiple times, while only querying the third-party API once
+- Could provide the format of the sentence as a config value.
+- Multiple keywords, queried multiple times, while only querying the third-party API once.
+- Keyword could be taken in by the route rather than a query string.
+- Keyword could have further validation in order to make sure this is just a word.
+- Better error handling including when the API returns a unsuccessful response.
+- More test coverage inludind integration and e2e test cases.

@@ -50,7 +50,6 @@ namespace SentenceGenerator.Domain.Services
                 throw;
             }
 
-            //TODO: should this throw an error?
             return null;
         }
 
